@@ -57,71 +57,116 @@
             android:backgroundTint="#c4c4c4"
             />
 
+
+
     </LinearLayout>
 
-
-
-
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginTop="70dp"
+            android:text="Todos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:scaleType="fitXY"
-                android:id="@+id/imageView"
-                android:layout_width="208dp"
-                android:layout_height="164dp"
-                android:layout_gravity="center"
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="Posts"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button3" />
 
-                android:layout_marginTop="70dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/travel1" />
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="Albums"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button5" />
 
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_marginTop="50dp"
-                android:id="@+id/imageView2"
-                android:layout_width="208dp"
-                android:layout_height="164dp"
-                android:layout_gravity="center"
-                android:src="@drawable/travel2" />
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:text="Photos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button6" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_marginTop="50dp"
-                android:id="@+id/imageView3"
-                android:layout_width="208dp"
-                android:layout_height="164dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/travel3" />
 
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_marginTop="50dp"
-                android:id="@+id/imageView4"
-                android:layout_width="208dp"
-                android:layout_height="164dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/travel4" />
+    <!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-            <ImageView
-                android:scaleType="fitXY"
-                android:layout_marginTop="50dp"
-                android:id="@+id/imageView5"
-                android:layout_width="208dp"
-                android:layout_height="164dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/first" />
-        </LinearLayout>
-    </ScrollView>
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical" >-->
+
+<!--            <ImageView-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:id="@+id/imageView"-->
+<!--                android:layout_width="208dp"-->
+<!--                android:layout_height="164dp"-->
+<!--                android:layout_gravity="center"-->
+
+<!--                android:layout_marginTop="70dp"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:src="@drawable/travel1" />-->
+
+<!--            <ImageView-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:id="@+id/imageView2"-->
+<!--                android:layout_width="208dp"-->
+<!--                android:layout_height="164dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:src="@drawable/travel2" />-->
+
+<!--            <ImageView-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:id="@+id/imageView3"-->
+<!--                android:layout_width="208dp"-->
+<!--                android:layout_height="164dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:src="@drawable/travel3" />-->
+
+<!--            <ImageView-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:id="@+id/imageView4"-->
+<!--                android:layout_width="208dp"-->
+<!--                android:layout_height="164dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:src="@drawable/travel4" />-->
+
+<!--            <ImageView-->
+<!--                android:scaleType="fitXY"-->
+<!--                android:layout_marginTop="50dp"-->
+<!--                android:id="@+id/imageView5"-->
+<!--                android:layout_width="208dp"-->
+<!--                android:layout_height="164dp"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginBottom="8dp"-->
+<!--                android:src="@drawable/first" />-->
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
 
 
 

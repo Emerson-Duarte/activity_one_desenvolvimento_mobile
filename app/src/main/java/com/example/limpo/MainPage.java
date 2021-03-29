@@ -45,6 +45,42 @@ public class MainPage extends AppCompatActivity {
             }
 
         });
+
+        Button toTodos = (Button) findViewById(R.id.button3);
+
+        toTodos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                toTodos(v);
+            }
+
+        });
+
+        Button toPosts = (Button) findViewById(R.id.button5);
+
+        toPosts.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                toPosts(v);
+            }
+
+        });
+
+        Button toAlbums = (Button) findViewById(R.id.button6);
+
+        toAlbums.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                toAlbums(v);
+            }
+
+        });
+
+        Button toPhotos = (Button) findViewById(R.id.button7);
+
+        toPhotos.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                toPhotos(v);
+            }
+
+        });
     }
 
     public void backToLogin(View view) {
@@ -54,6 +90,26 @@ public class MainPage extends AppCompatActivity {
 
     public void restartApplication(View view) {
         Intent intent = new Intent(this,SplashScreen.class);
+        startActivity(intent);
+    }
+
+    public void toTodos(View view) {
+        Intent intent = new Intent(this,ListTodo.class);
+        startActivity(intent);
+    }
+
+    public void toPosts(View view) {
+        Intent intent = new Intent(this,ListPosts.class);
+        startActivity(intent);
+    }
+
+    public void toAlbums(View view) {
+        Intent intent = new Intent(this,ListAlbums.class);
+        startActivity(intent);
+    }
+
+    public void toPhotos(View view) {
+        Intent intent = new Intent(this,ListPhotos.class);
         startActivity(intent);
     }
 }
