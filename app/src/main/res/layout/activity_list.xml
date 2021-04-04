@@ -29,24 +29,16 @@
         >
     </LinearLayout>
 
-
-    <ScrollView
-        android:id="@+id/scrollViewItens"
-        android:layout_width="300dp"
-        android:layout_height="719dp"
-        android:layout_marginTop="150dp"
-        android:textAlignment="center"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLists"
+        android:layout_width="304dp"
+        android:layout_height="615dp"
+        android:background="#41FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:id="@+id/layoutVerticalItens"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+        app:layout_constraintTop_toTopOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.744" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

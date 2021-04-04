@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -18,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.limpo.adapter.AlbumAdapter;
 import com.example.limpo.model.Albums;
 
 import org.json.JSONArray;
@@ -76,6 +79,14 @@ public class ListAlbums extends AppCompatActivity
                 albums.add(obj);
 
             }
+
+            RecyclerView rv = findViewById(R.id.rvLists);
+            LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+            rv.setLayoutManager(llm);
+            AlbumAdapter albumAdapter = new AlbumAdapter(albums);
+            rv.setAdapter(albumAdapter);
+
+            /*
             Toast.makeText(this, "qtd:" + albums.size(), Toast.LENGTH_LONG).show();
             LinearLayout ll = findViewById(R.id.layoutVerticalItens);
             for (Albums obj1 : albums) {
@@ -86,17 +97,18 @@ public class ListAlbums extends AppCompatActivity
                     @Override
                     public void onClick(View v) {
                         Button btn = (Button) v;
-                        Albums Albums = (Albums) btn.getTag();
+                        Albums albums = (Albums) btn.getTag();
                         Intent intent = new Intent(getApplicationContext(), DetalheAlbumActivity.class);
 
                         // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objAlbum", Albums);
+                        intent.putExtra("objAlbum", albums);
                         // lança intent para o SO chamar a activity
                         startActivity(intent);
                     }
                 });
                 ll.addView(bt);
             }
+            */
 
 
         } catch (JSONException e) {
