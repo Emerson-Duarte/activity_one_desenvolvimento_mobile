@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,7 +18,6 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.limpo.model.Posts;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -76,26 +76,27 @@ public class ListPosts extends AppCompatActivity
                 posts.add(obj);
 
             }
-            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
-            for (Posts obj1 : posts) {
-                Button bt = new Button(this);
-                bt.setText(obj1.getTitle());
-                bt.setTag(obj1);
-                bt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Button btn = (Button) v;
-                        Posts posts = (Posts) btn.getTag();
-                        Intent intent = new Intent(getApplicationContext(), DetalhePostActivity.class);
-
-                        // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objPost", posts);
-                        // lança intent para o SO chamar a activity
-                        startActivity(intent);
-                    }
-                });
-                ll.addView(bt);
-            }
+//            Toast.makeText(this, "qtd:" + posts.size(), Toast.LENGTH_LONG).show();
+//            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
+//            for (Posts obj1 : posts) {
+//                Button bt = new Button(this);
+//                bt.setText(obj1.getTitle());
+//                bt.setTag(obj1);
+//                bt.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Button btn = (Button) v;
+//                        Posts posts = (Posts) btn.getTag();
+//                        Intent intent = new Intent(getApplicationContext(), DetalhePostActivity.class);
+//
+//                        // adicional para incluir dados para a proxima activity
+//                        intent.putExtra("objPost", posts);
+//                        // lança intent para o SO chamar a activity
+//                        startActivity(intent);
+//                    }
+//                });
+//                ll.addView(bt);
+//            }
 
 
         } catch (JSONException e) {

@@ -77,26 +77,26 @@ public class ListTodo extends AppCompatActivity
                 todos.add(obj);
 
             }
-            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
-            for (Todos obj1 : todos) {
-                Button bt = new Button(this);
-                bt.setText(obj1.getTitle());
-                bt.setTag(obj1);
-                bt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Button btn = (Button) v;
-                        Todos todos = (Todos) btn.getTag();
-                        Intent intent = new Intent(getApplicationContext(), DetalheTodoActivity.class);
-
-                        // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objTodo", todos);
-                        // lança intent para o SO chamar a activity
-                        startActivity(intent);
-                    }
-                });
-                ll.addView(bt);
-            }
+//            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
+//            for (Todos obj1 : todos) {
+//                Button bt = new Button(this);
+//                bt.setText(obj1.getTitle());
+//                bt.setTag(obj1);
+//                bt.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Button btn = (Button) v;
+//                        Todos todos = (Todos) btn.getTag();
+//                        Intent intent = new Intent(getApplicationContext(), DetalheTodoActivity.class);
+//
+//                        // adicional para incluir dados para a proxima activity
+//                        intent.putExtra("objTodo", todos);
+//                        // lança intent para o SO chamar a activity
+//                        startActivity(intent);
+//                    }
+//                });
+//                ll.addView(bt);
+//            }
 
 
         } catch (JSONException e) {

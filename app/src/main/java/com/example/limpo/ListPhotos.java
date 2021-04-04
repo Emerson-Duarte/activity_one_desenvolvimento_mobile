@@ -79,27 +79,27 @@ public class ListPhotos extends AppCompatActivity
                 photos.add(obj);
 
             }
-            Toast.makeText(this, "qtd:" + photos.size(), Toast.LENGTH_LONG).show();
-            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
-            for (Photos obj1 : photos) {
-                Button bt = new Button(this);
-                bt.setText(obj1.getTitle());
-                bt.setTag(obj1);
-                bt.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Button btn = (Button) v;
-                        Photos Photos = (Photos) btn.getTag();
-                        Intent intent = new Intent(getApplicationContext(), DetalhePhotoActivity.class);
-
-                        // adicional para incluir dados para a proxima activity
-                        intent.putExtra("objPhoto", Photos);
-                        // lança intent para o SO chamar a activity
-                        startActivity(intent);
-                    }
-                });
-                ll.addView(bt);
-            }
+//            Toast.makeText(this, "qtd:" + photos.size(), Toast.LENGTH_LONG).show();
+//            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
+//            for (Photos obj1 : photos) {
+//                Button bt = new Button(this);
+//                bt.setText(obj1.getTitle());
+//                bt.setTag(obj1);
+//                bt.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Button btn = (Button) v;
+//                        Photos Photos = (Photos) btn.getTag();
+//                        Intent intent = new Intent(getApplicationContext(), DetalhePhotoActivity.class);
+//
+//                        // adicional para incluir dados para a proxima activity
+//                        intent.putExtra("objPhoto", Photos);
+//                        // lança intent para o SO chamar a activity
+//                        startActivity(intent);
+//                    }
+//                });
+//                ll.addView(bt);
+//            }
 
 
         } catch (JSONException e) {
