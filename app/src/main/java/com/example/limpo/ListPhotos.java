@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -17,6 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.limpo.adapter.PhotoAdapter;
+import com.example.limpo.adapter.TodoAdapter;
 import com.example.limpo.model.Photos;
 
 import org.json.JSONArray;
@@ -79,6 +83,13 @@ public class ListPhotos extends AppCompatActivity
                 photos.add(obj);
 
             }
+
+            RecyclerView rv = findViewById(R.id.rvLists);
+            LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+            rv.setLayoutManager(llm);
+            PhotoAdapter photoAdapter = new PhotoAdapter(photos);
+            rv.setAdapter(photoAdapter);
+
 //            Toast.makeText(this, "qtd:" + photos.size(), Toast.LENGTH_LONG).show();
 //            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
 //            for (Photos obj1 : photos) {
