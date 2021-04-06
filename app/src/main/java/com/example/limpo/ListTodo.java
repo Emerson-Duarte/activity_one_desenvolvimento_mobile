@@ -11,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -18,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.limpo.adapter.TodoAdapter;
 import com.example.limpo.model.Todos;
 
 import org.json.JSONArray;
@@ -77,6 +80,14 @@ public class ListTodo extends AppCompatActivity
                 todos.add(obj);
 
             }
+
+            RecyclerView rv = findViewById(R.id.rvLists);
+            LinearLayoutManager llm = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+            rv.setLayoutManager(llm);
+            TodoAdapter todoAdapter = new TodoAdapter(todos);
+            rv.setAdapter(todoAdapter);
+
+
 //            LinearLayout ll = findViewById(R.id.layoutVerticalItens);
 //            for (Todos obj1 : todos) {
 //                Button bt = new Button(this);
